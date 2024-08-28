@@ -67,7 +67,6 @@ impl wayland_client::Dispatch<WpSecurityContextV1, ()> for AppData {
         conn: &Connection,
         qhandle: &wayland_client::QueueHandle<Self>,
     ) {
-        dbg!(&event);
     }
 }
 
@@ -80,7 +79,6 @@ impl wayland_client::Dispatch<WpSecurityContextManagerV1, ()> for AppData {
         conn: &Connection,
         qhandle: &wayland_client::QueueHandle<Self>,
     ) {
-        dbg!(&event);
     }
 }
 
