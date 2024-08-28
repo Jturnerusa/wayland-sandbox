@@ -25,6 +25,7 @@ cargo run -- \
       --close-fd ${close_fd}
 
 WAYLAND_DISPLAY=${XDG_RUNTIME_DIR}/wayland-sandbox \
+               bwrap \
                --unshare-all \
                --die-with-parent \
                --setenv BWRAP 1 \
