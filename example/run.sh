@@ -44,7 +44,7 @@ WAYLAND_DISPLAY=${XDG_RUNTIME_DIR}/wayland-sandbox \
                --ro-bind /etc /etc \
                --ro-bind /var /var \
                --tmpfs /mnt/sandbox \
-               $@
+               "$@"
 
 echo 1 > ${close_pipe}
 rm ${close_pipe}
