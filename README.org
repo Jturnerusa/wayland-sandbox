@@ -1,0 +1,9 @@
+This is a small utility to configure and create a wayland security context.
+
+A wayland security context allows connecting unprivleged clients to the compositor.
+
+This tool is not a sandbox on its own, it's intended to be used with bwrap. The unix socket
+that you provide as an argument should be bind mounted into the sandbox, the regular socket
+should be excluded from the sandbox, otherwise clients can bypass the security context.
+
+See the examples directory for usage.
