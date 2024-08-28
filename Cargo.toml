@@ -5,5 +5,6 @@ edition = "2021"
 
 [dependencies]
 wayland-client = "0.31.5"
+wayland-protocols = { version = "0.32.3", features = ["client", "staging"] }
 clap = { version = "4.5.16", features = ["derive"] }
 nix = { version = "0.29.0", features = ["socket"] }
