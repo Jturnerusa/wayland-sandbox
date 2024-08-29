@@ -60,24 +60,24 @@ impl AppData {
 
 impl wayland_client::Dispatch<WpSecurityContextV1, ()> for AppData {
     fn event(
-        state: &mut Self,
-        proxy: &WpSecurityContextV1,
-        event: <WpSecurityContextV1 as wayland_client::Proxy>::Event,
-        data: &(),
-        conn: &Connection,
-        qhandle: &wayland_client::QueueHandle<Self>,
+        _: &mut Self,
+        _: &WpSecurityContextV1,
+        _: <WpSecurityContextV1 as wayland_client::Proxy>::Event,
+        _: &(),
+        _: &Connection,
+        _: &wayland_client::QueueHandle<Self>,
     ) {
     }
 }
 
 impl wayland_client::Dispatch<WpSecurityContextManagerV1, ()> for AppData {
     fn event(
-        state: &mut Self,
-        proxy: &WpSecurityContextManagerV1,
-        event: <WpSecurityContextManagerV1 as wayland_client::Proxy>::Event,
-        data: &(),
-        conn: &Connection,
-        qhandle: &wayland_client::QueueHandle<Self>,
+        _: &mut Self,
+        _: &WpSecurityContextManagerV1,
+        _: <WpSecurityContextManagerV1 as wayland_client::Proxy>::Event,
+        _: &(),
+        _: &Connection,
+        _: &wayland_client::QueueHandle<Self>,
     ) {
     }
 }
@@ -87,8 +87,8 @@ impl wayland_client::Dispatch<wl_registry::WlRegistry, ()> for AppData {
         state: &mut Self,
         proxy: &wl_registry::WlRegistry,
         event: <wl_registry::WlRegistry as wayland_client::Proxy>::Event,
-        data: &(),
-        conn: &wayland_client::Connection,
+        _: &(),
+        _: &wayland_client::Connection,
         qhandle: &wayland_client::QueueHandle<Self>,
     ) {
         match event {
