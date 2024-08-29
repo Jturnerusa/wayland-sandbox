@@ -97,7 +97,6 @@ impl wayland_client::Dispatch<wl_registry::WlRegistry, ()> for AppData {
                 interface,
                 version,
             } if interface == "wp_security_context_manager_v1" => {
-                eprintln!("binding context");
                 let security_manager =
                     proxy.bind::<WpSecurityContextManagerV1, _, _>(name, version, qhandle, ());
 
@@ -161,8 +160,6 @@ fn run() -> Result<(), Box<dyn Error>> {
     if let Some(instance_id) = &args.instance_id {
         security_context.set_instance_id(instance_id.clone());
     }
-
-    eprintln!("opening connection");
 
     security_context.commit();
 
